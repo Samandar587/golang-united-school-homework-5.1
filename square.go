@@ -9,8 +9,8 @@ type Square struct {
 	a     uint
 }
 
-func (s Square) End(a, b int) Point {
-	return Point{x: a - int(s.a), y: b - int(s.a)}
+func (s Square) End() Point {
+	return Point{x: s.start.x + int(s.a), y: s.start.y + int(s.a)}
 }
 
 func (s Square) Area() uint {
