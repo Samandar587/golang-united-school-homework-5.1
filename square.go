@@ -9,7 +9,7 @@ type Square struct {
 	a     uint
 }
 
-func (p Point) End(s Square) Point {
+func (s Square) End(p Point) Point {
 	return Point{x: int(s.a) + p.x, y: int(s.a) + p.y}
 }
 
