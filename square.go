@@ -1,7 +1,7 @@
 package square
 
 type Point struct {
-	x, y uint
+	x, y int
 }
 
 type Square struct {
@@ -9,8 +9,8 @@ type Square struct {
 	a     uint
 }
 
-func (s Square) End(p Point) Point {
-	return Point{x: p.x + s.a, y: p.x + s.a}
+func (p Point) End(s Square) Point {
+	return Point{x: int(s.a) + p.x, y: int(s.a) + p.y}
 }
 
 func (s Square) Area() uint {
